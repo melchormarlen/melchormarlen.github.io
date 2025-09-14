@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Users,
@@ -9,24 +10,23 @@ import {
   UserCog,
   CheckCircle,
   TrendingUp,
-  Rocket,
+  Rocket,X
 } from "lucide-react";
-
 const caseStudies = {
   "itop-app": {
-    title: "IT Technician Web App – Eli Lilly",
+    title: "IT on Point",
     tagline: "An internal full-stack tool that streamlined IT support workflows.",
     role: "Software Engineering Intern (Full-Stack Developer)",
     timeline: "12 Weeks (Summer 2025)",
-    tech: ["React", "Django", "PostgreSQL", "Docker", "CATS Deployment"],
+    tech: ["React", "Django", "PostgreSQL", "Docker","Kubernetes", "Deployment", "Github Actions"],
     overview:
-      "The IT Technician Web App was created to modernize IT support workflows. I was responsible for building end-to-end features, improving technician efficiency, and contributing to a scalable internal solution.",
+      "The IT on Point (ITOP) User History Web Application was developed to modernize the way Eli Lilly’s IT Technicians manage user support workflows. I designed and implemented end-to-end features that allow technicians to quickly access user histories, track patterns across tickets, and troubleshoot recurring issues. By building both frontend and backend components, I helped deliver a scalable internal tool that reduces inefficiencies, enhances visibility, and empowers IT staff to provide faster, higher-quality support.",
     problem:
-      "Technicians lacked a unified workflow. Tasks were scattered across email and outdated tools, leading to bottlenecks and slow ticket resolution.",
+      "Before ITOP, technicians relied on fragmented systems — a mix of emails, spreadsheets, and legacy tools — to manage user support. This scattered workflow created bottlenecks, slowed down ticket resolution, and made it difficult to track recurring issues or monitor trends. Managers also lacked real-time visibility into technician workloads, making it harder to allocate resources efficiently or measure team performance.",
     challenge:
-      "Technicians and managers needed a centralized tool to reduce wasted time, improve visibility, and streamline ticket handling.",
+      "The primary challenge was creating a centralized, user-friendly solution that would work within Lilly’s enterprise IT ecosystem. The app needed to:",
     objective:
-      "Develop a full-stack app that consolidates workflows, improves efficiency, and lays the foundation for scalable IT support solutions.",
+      "The goal of ITOP User History was to deliver a full-stack web application that:",
     research: [
       {
         icon: Users,
@@ -128,6 +128,7 @@ const caseStudies = {
 export default function CaseStudy() {
   const { id } = useParams();
   const study = caseStudies[id];
+  const [impactOpen, setImpactOpen] = useState(false);
 
   if (!study) {
     return (
@@ -138,6 +139,7 @@ export default function CaseStudy() {
   }
 
   return (
+    <>
     <section className="section-container py-20 space-y-24">
     {/* Hero Section */}
     <motion.div
@@ -177,11 +179,28 @@ export default function CaseStudy() {
           <h2 className="text-2xl font-semibold text-[#DC9DD0]">Project Overview</h2>
           <p className="text-gray-300">{study.overview}</p>
 
-          <h3 className="text-[#DC9DD0] font-semibold mt-6">The Challenge</h3>
+          <h3 className="text-[#DC9DD0] font-semibold mt-6">Problem</h3>
+          <p className="text-gray-300">{study.problem}</p>
+
+          <h3 className="text-[#DC9DD0] font-semibold mt-6">Challenge</h3>
           <p className="text-gray-300">{study.challenge}</p>
+          <ul className="list-disc list-inside text-gray-200 mt-4 space-y-2">
+            <li>Consolidate user history into a single platform.</li>
+            <li>Enable quick searching and filtering for past tickets.</li>
+            <li>Provide managers with oversight capabilities without disrupting technician workflows.</li>
+            <li>Be deployable and scalable through Lilly’s internal infrastructure (CATS platform, Dockerized deployment).</li>
+          </ul>
+          <p className="text-gray-300">Balancing technical constraints (security, internal tooling standards) with usability for IT staff was a key focus throughout development.</p>
 
           <h3 className="text-[#DC9DD0] font-semibold mt-6">Objective</h3>
           <p className="text-gray-300">{study.objective}</p>
+           <ul className="list-disc list-inside text-gray-200 mt-4 space-y-2">
+            <li>Streamlined IT technician workflows by consolidating ticket history into one accessible platform.</li>
+            <li>Improved efficiency and reduced average resolution time by surfacing past user interactions.</li>
+            <li>Equipped managers with visibility and metrics to better distribute workloads and identify recurring issues.</li>
+            <li>Established a scalable foundation for future features, including analytics dashboards and AI-assisted ticket routing.</li>
+          </ul>
+
         </div>
 
         {/* Snapshot */}
@@ -413,8 +432,71 @@ export default function CaseStudy() {
           ))}
         </ul>
       </motion.div>
+    {/* Business Impact */}
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="space-y-6">
+              <h2 className="text-2xl font-semibold text-[#DC9DD0] mb-4">Business Impact</h2>
+              <p className="text-gray-300">To understand the real-world impact of this solution, we surveyed IT On Point technicians. Their responses highlighted inefficiencies in locating guest information and validated the need for a centralized tool.</p>
+              <div className="text-center">
+                <button onClick={() => setImpactOpen(true)} className="px-6 py-3 bg-[#DC9DD0] text-[#493545] font-semibold rounded-full shadow-lg hover:bg-[#b478a9] transition">
+                  See the Real Impact 🚀
+                </button>
+              </div>
+            </motion.div>
+          </section>
 
+          {/* 👇 Modal OUTSIDE section */}
+          {impactOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-lg"
+              onClick={() => setImpactOpen(false)}
+            >
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className="bg-[#2b1f2c]/90 backdrop-blur-xl border border-white/10 w-[90%] max-w-3xl rounded-2xl shadow-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Header */}
+                <div className="flex justify-between items-center px-6 py-3 bg-gradient-to-r from-[#DC9DD0] to-[#5C3A57]">
+                  <h3 className="text-white font-bold tracking-wide">Business Impact</h3>
+                  <button onClick={() => setImpactOpen(false)}>
+                    <X className="w-6 h-6 text-gray-200 hover:text-white transition" />
+                  </button>
+                </div>
 
-  </section>
-  );
-}
+                {/* Body */}
+                <div className="p-8 space-y-6">
+                  <div className="flex items-start gap-2">
+                    <Lightbulb className="w-5 h-5 text-[#DC9DD0] mt-1" />
+                    <p className="text-gray-300 leading-relaxed">
+                      <span className="text-[#DC9DD0] font-semibold">Survey Insights:</span> 50% of technicians reported difficulty locating guest information, 75% cited data scattered across systems, and 25% pointed to outdated or inaccurate data.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
+                    <p className="text-gray-300 leading-relaxed">
+                      <span className="text-[#DC9DD0] font-semibold">Validation:</span> 92% said the app would be extremely or very useful in streamlining workflows and accessing data quickly.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <TrendingUp className="w-5 h-5 text-pink-400 mt-1" />
+                    <p className="text-gray-300 leading-relaxed">
+                      <span className="text-[#DC9DD0] font-semibold">Measured Value:</span> Average interaction time per guest was 25.5 minutes. With ITOP, technicians estimated a 10% time savings (~23–25 minutes).
+                    </p>
+                  </div>
+                  <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-center">
+                    <h2 className="text-5xl font-extrabold bg-gradient-to-r from-[#DC9DD0] to-pink-400 bg-clip-text text-transparent">1.8 Years Saved</h2>
+                    <p className="text-gray-400 mt-2">Equivalent to 5 minutes saved per interaction × ~63,000 yearly interactions.</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+      </>
+      );
+    }
