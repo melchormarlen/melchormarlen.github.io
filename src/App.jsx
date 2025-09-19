@@ -9,6 +9,7 @@ import CaseStudy from "./pages/casestudy.jsx";
 import Contact from "./components/contact.jsx";
 import ChatWidget from "./components/chatwidget.jsx";
 import BackToTop from "./components/backtotop.jsx";
+import ScrollToTop from "./components/scrolltotop.jsx";
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
        {/* Floating UI elements */}
         <ChatWidget /> 
         <BackToTop className="!bottom-20" /> {/* push it up a bit */}
-
+        <ScrollToTop /> {/* scroll to top on route change */}
       </div>
     </Router>
   );
