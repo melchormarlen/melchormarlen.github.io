@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#4A2F47] text-white font-sans;
+  @apply bg-[#493545] text-white font-sans;
 }
 /* Hide scrollbar on Chrome, Safari and Edge */
 .scrollbar-hide::-webkit-scrollbar {
@@ -30,3 +30,11 @@ html {
 .animate-marquee {
   animation: marquee 40s linear infinite;
 }
+/* Global layout container used by Navbar, tabs, pages */
+.section-container {
+  @apply max-w-7xl mx-auto px-6 sm:px-8;
+}
+
+/* optional: hide horizontal scrollbar on tabs row */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

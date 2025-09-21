@@ -18,6 +18,15 @@ const projects = {
   ],
 };
 
+const CATEGORY_LABELS = {
+  uiux: "UI/UX",
+  fullstack: "Full-Stack",
+  hackathons: "Hackathons",
+};
+
+const getCategoryLabel = (slug = "") =>
+  CATEGORY_LABELS[slug] || slug.replace("-", " ").replace(/\b\w/g, c => c.toUpperCase());
+
 const funFacts = [
   "☕ Built during countless late-night Yerbamate sessions.",
   "🎵 Most of the code was written while vibing to Bad Bunny and Cris MJ.",
@@ -138,8 +147,8 @@ export default function ProjectCategory() {
         Back
       </Link>
 
-      <h2 className="text-3xl font-bold mb-12 capitalize">
-        {category.replace("-", " ")} Projects
+      <h2 className="text-3xl font-bold mb-12">
+        {getCategoryLabel(category)} Projects
       </h2>
 
       {/* Left Arrow */}
