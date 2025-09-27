@@ -120,7 +120,7 @@ export default function CaseStudy() {
   if (!data) {
     return (
       <section className="section-container py-32">
-        <h2 className="text-3xl font-bold">Case Study Not Found</h2>
+        <h2 className="text-3xl font-bold">Case Study In-Progress, Stay Tuned 🚧</h2>
       </section>
     );
   }

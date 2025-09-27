@@ -10,11 +10,11 @@ const projects = {
   ],
   uiux: [
     { id: "codify", title: "Codify Student Org Website", desc: "Led UI/UX design from Figma wireframes to advising frontend implementation.", bg: "/codifyLogo.png" },
-    { id: "teacher-rating", title: "Rapid Reviews - G2 Chicago P33 Project", desc: "Collaborated on a student review app prototype, focusing on usability.", bg: "/bg-g2p33.jpg" },
+    { id: "teacher-rating", title: "Rapid Reviews - G2 Chicago P33 Project", desc: "Collaborated on a student review app prototype, focusing on usability.", bg: "/rapid.png" },
   ],
   hackathons: [
-    { id: "here-gm", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/bg-here.jpg" },
-    { id: "lilly-ai", title: "Eli Lilly AI Onboarding Assistant", desc: "AI-powered onboarding tool with React + Express.", bg: "/bg-lillyai.jpg" },
+    { id: "here-gm", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/here.png" },
+    { id: "lilly-ai", title: "Eli Lilly AI Onboarding Assistant", desc: "AI-powered onboarding tool with React + Express.", bg: "/lilly logo.jpg" },
   ],
 };
 
