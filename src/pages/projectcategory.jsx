@@ -9,8 +9,8 @@ const projects = {
     { id: "tinder-db", title: "Tinder Web-App Database", desc: "A mock dating platform showcasing CRUD operations with a MySQL-Python backend and a Figma-designed user interface.", bg: "/tinder.png" },
   ],
   uiux: [
-    { id: "codify", title: "Codify Student Org Website", desc: "Led UI/UX design from Figma wireframes to advising frontend implementation.", bg: "/bg-codify.jpg" },
-    { id: "g2p33", title: "G2 Chicago P33 Project", desc: "Collaborated on a student review app prototype, focusing on usability.", bg: "/bg-g2p33.jpg" },
+    { id: "codify", title: "Codify Student Org Website", desc: "Led UI/UX design from Figma wireframes to advising frontend implementation.", bg: "/codifyLogo.png" },
+    { id: "teacher-rating", title: "Rapid Reviews - G2 Chicago P33 Project", desc: "Collaborated on a student review app prototype, focusing on usability.", bg: "/bg-g2p33.jpg" },
   ],
   hackathons: [
     { id: "here-gm", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/bg-here.jpg" },

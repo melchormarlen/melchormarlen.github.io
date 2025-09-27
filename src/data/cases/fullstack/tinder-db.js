@@ -21,6 +21,36 @@ const tinderDb = {
     { title: "Project Team", desc: "Collaborators responsible for database design, API integration, and frontend build." },
     { title: "Instructor", desc: "Defined grading criteria and project requirements, ensuring technical rigor and schema quality." },
   ],
+  stakeholderChallenges: [
+  {
+    icon: "database",
+    challenge: "Designing a relational schema flexible enough to support swipes, matches, and messages without breaking integrity.",
+    stakeholders: "Project Team, Instructor",
+    resolution:
+      "Mapped ER diagrams early, enforced constraints (unique matches, foreign keys), and validated flows with seeded test data to ensure robustness."
+  },
+  {
+    icon: "users",
+    challenge: "Balancing user expectations of a familiar Tinder-like experience with the limits of a semester project.",
+    stakeholders: "End Users, Project Team",
+    resolution:
+      "Scoped features to core flows (swipe, match, chat) while maintaining intuitive UI patterns that mirrored real-world dating apps."
+  },
+  {
+    icon: "code",
+    challenge: "Integrating frontend and backend smoothly despite differing team skill levels.",
+    stakeholders: "Project Team",
+    resolution:
+      "Split responsibilities—dedicated schema/API roles vs. UI/UX roles—and used documented API contracts to sync workstreams."
+  },
+  {
+    icon: "message-square",
+    challenge: "Ensuring chat and match flows worked without duplication or confusing errors.",
+    stakeholders: "End Users, Project Team",
+    resolution:
+      "Tested with realistic seed users, enforced match-scoped messaging, and refined error states for clarity."
+  },
+],
 
   objectives: [
     { title: "Model Core Entities", desc: "Users, profiles, photos, swipes, matches, messages." },
@@ -76,11 +106,10 @@ const tinderDb = {
     },
   ],
   takeaways: [
-    "Mapping end-to-end user journeys exposed friction points we hadn’t seen initially.",
-    "Designing for first-time users reinforced the importance of clarity and simplicity in flows.",
-    "Thinking like an outsider helped us build an app that required no extra explanation to use.",
+  "Prioritizing essentials under tight deadlines strengthened my ability to deliver fast without losing usability.",
+  "Building a cohesive brand identity reinforced how design drives credibility and engagement.",
+  "Designing with first-time users in mind sharpened my focus on clarity and intuitive navigation.",
   ],
-
 };
 
 export default tinderDb;
