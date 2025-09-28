@@ -1,4 +1,3 @@
-// src/components/contact.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, MapPin, Phone } from "lucide-react";

@@ -1,4 +1,3 @@
-// src/pages/marketing.jsx
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MARKETING as data } from "@/data/marketing.index.js";

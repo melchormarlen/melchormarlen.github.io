@@ -1,10 +1,8 @@
-// src/data/marketing.index.js
 export const MARKETING = {
   title: "Marketing & Branding",
   org: "SHPE-IIT",
   heroMedia: {
-    // put these assets in /public/marketing/
-    videoSrc: "/shpeiit.mp4",      // or a short montage
+    videoSrc: "/shpeiit.mp4",      
   },
   overview:
   "As Marketing Director for SHPE-IIT, I drove brand guidelines, social campaigns, and content systems that expanded our reach and engagement while keeping a consistent visual identity across platforms. Beyond campaigns, I founded and led our Public Relations Committee, where I learned how to grow as a leader by mentoring peers, coordinating sub-teams, and fostering collaboration across the chapter. This experience not only sharpened my skills in branding and strategy, but also taught me how to empower others and build sustainable systems for long-term impact.",
