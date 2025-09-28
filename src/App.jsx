@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar.jsx";
 import Hero from "./components/hero.jsx";
 import About from "./components/about.jsx";
@@ -10,38 +11,49 @@ import Contact from "./components/contact.jsx";
 import ChatWidget from "./components/chatwidget.jsx";
 import BackToTop from "./components/backtotop.jsx";
 import ScrollToTop from "./components/scrolltotop.jsx";
+import Marketing from "./pages/marketing.jsx";
 
+function AppShell() {
+  const location = useLocation();
 
-function App() {
+  // Hide navbar on project pages and the Marketing page
+  const hideNavbar =
+    /^\/projects\/.+/.test(location.pathname) || location.pathname === "/marketing";
+
   return (
-    <Router>
-      <div className="bg-[#493545] min-h-screen text-white font-sans">
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <About />
-                <Projects />
-                <Contact />
-                <Footer />
-                
-              </>
-            }
-          />
-          <Route path="/projects/:category" element={<ProjectCategory />} />
-          <Route path="/projects/:category/:id" element={<CaseStudy />} />
-        </Routes>
+    <div className="bg-[#493545] min-h-screen text-white font-sans">
+      {!hideNavbar && <Navbar />}
 
-       {/* Floating UI elements */}
-        <ChatWidget /> 
-        <BackToTop className="!bottom-20" /> {/* push it up a bit */}
-        <ScrollToTop /> {/* scroll to top on route change */}
-      </div>
-    </Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+              <Projects />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/projects/:category" element={<ProjectCategory />} />
+        <Route path="/projects/:category/:id" element={<CaseStudy />} />
+        <Route path="/marketing" element={<Marketing />} />
+      </Routes>
+
+      {/* Floating UI elements */}
+      <ChatWidget />
+      <BackToTop className="!bottom-20" />
+      <ScrollToTop />
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <AppShell />
+    </Router>
+  );
+}

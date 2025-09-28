@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link to="/" className="hover:text-[#DC9DD0]">Home</Link>
         <a href="#about" className="hover:text-[#DC9DD0]">About</a>
         <a href="#projects" className="hover:text-[#DC9DD0]">Projects</a>
+        <Link to="/marketing" className="hover:text-[#DC9DD0]">Marketing</Link>
         <a href="#contact" className="hover:text-[#DC9DD0]">Contact</a>
       </div>
 
@@ -61,6 +62,7 @@ export default function Navbar() {
               <Link to="/" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Home</Link>
               <a href="#about" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>About</a>
               <a href="#projects" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Projects</a>
+              <Link to="/marketing" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Marketing</Link>
               <a href="#contact" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Contact</a>
             </motion.div>
           </>

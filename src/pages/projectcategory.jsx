@@ -13,7 +13,7 @@ const projects = {
     { id: "teacher-rating", title: "Rapid Reviews - G2 Chicago P33 Project", desc: "Collaborated on a student review app prototype, focusing on usability.", bg: "/rapid.png" },
   ],
   hackathons: [
-    { id: "here-gm", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/here.png" },
+    { id: "ev-charging", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/here.png" },
     { id: "lilly-ai", title: "Eli Lilly AI Onboarding Assistant", desc: "AI-powered onboarding tool with React + Express.", bg: "/lilly logo.jpg" },
   ],
 };
