@@ -2,7 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, Target, Rocket, Lightbulb, Image as ImageIcon, X , Users, Layers, Repeat, Percent, Award,  Gauge, LayoutDashboard, ShieldCheck, Award} from "lucide-react";
+import { CheckCircle2, Target, Rocket, Lightbulb, Image as ImageIcon, X , Users, Layers, Repeat, Percent, Award,  Gauge, LayoutDashboard, ShieldCheck} from "lucide-react";
 import { CASES_BY_ID } from "@/data/cases.index.js";
 
 // --- tiny UI helpers ---
