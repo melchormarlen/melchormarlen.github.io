@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 const categories = [
   { id: "fullstack", title: "Full Stack Development", desc: "End-to-end web applications built using modern frontend and backend technologies to deliver efficient, scalable solutions." },
   { id: "uiux", title: "UI/UX Design", desc: "User-centered design work focused on wireframing, prototyping, and optimizing digital interfaces for usability and accessibility." },
-  { id: "hackathons", title: "Hackathons & Innovation", desc: "Projects created in competitive environments, emphasizing problem-solving, technical execution, and collaboration." }
+  { id: "hackathons", title: "Hackathons & Innovation", desc: "Projects created in competitive environments, emphasizing problem-solving, technical execution, and collaboration." },
+  { id: "marketing", title: "Marketing & Branding", desc: "Event promotions, visual storytelling, and campaign work that grew engagement through design-driven marketing." },
+
 ];
 
 export default function Projects() {

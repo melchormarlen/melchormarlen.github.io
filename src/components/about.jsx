@@ -43,23 +43,29 @@ export default function About() {
       {/* Right Side - Text */}
       <motion.div className="max-w-lg" variants={fromRight}>
         <motion.h2 className="text-3xl font-bold mb-6" variants={fadeUp}>
-          Hi! I’m a CS major with a strong passion for UI/UX Design and Full-Stack Development
+          Hi! I'm a recent CS grad blending software engineering, design, and marketing
         </motion.h2>
+
+        <motion.p
+          className="text-lg leading-[1.563rem] font-normal text-gray-200 mb-4"
+          variants={fadeUp}
+        >
+          Through my internship as a{" "}
+          <span className="text-[#DC9DD0]">Software Engineer at Eli Lilly</span>,
+          I built internal web applications using Django, PostgreSQL, and React —
+          gaining real full-stack experience from database to UI.
+        </motion.p>
 
         <motion.p
           className="text-lg leading-[1.563rem] font-normal text-gray-200 mb-6"
           variants={fadeUp}
         >
-          <span className="text-[#DC9DD0]">
-            I’ve gained hands-on experience creating user-centered designs and
-            building them with clean, responsive code. Through my internship as
-            a Software Engineer at Eli Lilly, I developed a full-stack experience
-            by working with technologies like Django, PostgreSQL, and React to build
-            internal web applications. With a background in graphic design as a Marketing
-            Director, I’ve designed event promotions and boosted engagement through visual
-            storytelling. I enjoy blending creativity with functionality to craft engaging,
-            impactful digital experiences.
-          </span>
+          I also bring a background in{" "}
+          <span className="text-[#DC9DD0]">graphic design and marketing</span>{" "}
+          from my time as a Marketing Director, where I designed event promotions
+          and grew engagement through visual storytelling. I love combining
+          creativity, data, and code to build things that actually work — and look
+          good doing it.
         </motion.p>
 
         <div className="flex gap-6">

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function ChatWidget() {
   const { pathname } = useLocation();
@@ -102,7 +102,7 @@ export default function ChatWidget() {
                 : { duration: 0 }
             }
           >
-            <MessageCircle className="h-5 w-5 text-white" />
+            <Sparkles className="h-5 w-5 text-white" />
             {showNotif && !open && (
               <span className="absolute top-1.5 right-1.5 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
             )}

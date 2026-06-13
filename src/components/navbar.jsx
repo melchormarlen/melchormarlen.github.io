@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "../context/ThemeContext.jsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="section-container flex justify-between items-center py-4 pt-8 bg-[#493545] relative">
@@ -16,9 +19,17 @@ export default function Navbar() {
       <div className="hidden md:flex space-x-20 text-base font-medium">
         <Link to="/" className="hover:text-[#DC9DD0]">Home</Link>
         <a href="#about" className="hover:text-[#DC9DD0]">About</a>
+        <a href="#skills" className="hover:text-[#DC9DD0]">Skills</a>
         <a href="#projects" className="hover:text-[#DC9DD0]">Projects</a>
         <Link to="/marketing" className="hover:text-[#DC9DD0]">Marketing</Link>
         <a href="#contact" className="hover:text-[#DC9DD0]">Contact</a>
+        <button
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+          className="p-2 rounded-full hover:bg-white/10 transition"
+        >
+          {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+        </button>
       </div>
 
       {/* Mobile Menu Button */}
@@ -64,6 +75,13 @@ export default function Navbar() {
               <a href="#projects" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Projects</a>
               <Link to="/marketing" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Marketing</Link>
               <a href="#contact" className="hover:text-[#DC9DD0]" onClick={() => setIsOpen(false)}>Contact</a>
+              <button
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+                className="p-2 rounded-full hover:bg-white/10 transition"
+              >
+                {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
             </motion.div>
           </>
         )}

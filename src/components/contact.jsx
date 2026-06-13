@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, MapPin, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin} from "lucide-react";
 
 export default function Contact() {
   const [status, setStatus] = useState({ loading: false, ok: false, error: "" });
@@ -77,13 +77,6 @@ export default function Contact() {
                 <Mail className="w-4 h-4 opacity-70" />
                 melchormarlen@gmail.com
               </a>
-              <a
-                href="tel:+1-000-000-0000"
-                className="flex items-center gap-2 hover:text-white"
-              >
-                <Phone className="w-4 h-4 opacity-70" />
-                Request via email
-              </a>
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 opacity-70" />
                 Chicago, IL
@@ -111,7 +104,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/mmelchor/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-[#5C3A57] hover:bg[#623d5d]"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-[#5C3A57] hover:bg-[#623d5d]"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" /> LinkedIn

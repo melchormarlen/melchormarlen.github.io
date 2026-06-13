@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#493545] text-white font-sans;
+  @apply bg-[#493545] text-white font-sans transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-[#493545] text-white;
+}
+
+:root:not(.dark) body {
+  @apply bg-[#f5f0f4] text-[#2b2030];
 }
 /* Hide scrollbar on Chrome, Safari and Edge */
 .scrollbar-hide::-webkit-scrollbar {
