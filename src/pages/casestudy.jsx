@@ -170,15 +170,6 @@ export default function CaseStudy() {
           </div>
         </div>
       </section>
-      {/* Quick stats teaser*/}
-      {data.kpis?.slice(0, 3).map((k, i) => (
-        <div key={i} className="text-center">
-          <div className="text-3xl md:text-4xl font-extrabold text-[var(--text-primary)] leading-none">
-            <CountUp value={k.kpi} />
-          </div>
-          <div className="text-xs text-gray-400">{k.label}</div>
-        </div>
-      ))}
       {/* MY ROLE */}
       <section id="my-role" className="section-container py-14 scroll-mt-28">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
