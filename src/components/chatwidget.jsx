@@ -102,7 +102,7 @@ export default function ChatWidget() {
                 : { duration: 0 }
             }
           >
-            <Sparkles className="h-5 w-5 text-white" />
+            <Sparkles className="h-5 w-5 text-[var(--text-primary)]" />
             {showNotif && !open && (
               <span className="absolute top-1.5 right-1.5 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
             )}

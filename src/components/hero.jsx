@@ -76,7 +76,7 @@ export default function Hero() {
           </a>
           <a
             href="#projects"
-            className="px-6 py-2 rounded-full border border-[#DC9DD0] text-[#DC9DD0] hover:bg-[#693365] hover:text-white transition"
+            className="px-6 py-2 rounded-full border border-[#DC9DD0] text-[#DC9DD0] hover:bg-[#693365] hover:text-[var(--text-primary)] transition"
           >
             View Projects
           </a>

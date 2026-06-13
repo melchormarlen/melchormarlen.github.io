@@ -53,7 +53,7 @@ export default function SectionTabs({
                 key={id}
                 onClick={() => jump(id)}
                 className={`relative rounded-full px-4 py-2 text-sm md:text-base transition
-                  ${isActive ? "text-white" : "text-[var(--text-secondary)] hover:text-white"}`}
+                  ${isActive ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`}
               >
                 {isActive && (
                   <motion.span

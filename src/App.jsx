@@ -17,7 +17,7 @@ function AppShell() {
   const hideNavbar = /^\/projects\/.+/.test(location.pathname);
 
   return (
-    <div className="bg-[var(--bg-page)] min-h-screen text-white font-sans">
+    <div className="bg-[var(--bg-page)] min-h-screen text-[var(--text-primary)] font-sans">
       {!hideNavbar && <Navbar />}
 
       <Routes>

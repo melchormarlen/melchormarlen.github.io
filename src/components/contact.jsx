@@ -72,7 +72,7 @@ export default function Contact() {
             <div className="mt-4 space-y-3 text-[var(--text-secondary)]">
               <a
                 href="mailto:melchormarlen@gmail.com"
-                className="flex items-center gap-2 hover:text-white"
+                className="flex items-center gap-2 hover:text-[var(--text-primary)]"
               >
                 <Mail className="w-4 h-4 opacity-70" />
                 melchormarlen@gmail.com
@@ -152,7 +152,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 required
-                className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
+                className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-[var(--text-primary)] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
                 placeholder="Your name"
               />
             </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 required
-                className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
+                className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-[var(--text-primary)] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
                 placeholder="you@example.com"
               />
             </div>
@@ -173,7 +173,7 @@ export default function Contact() {
             <input
               type="text"
               name="subject"
-              className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
+              className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-[var(--text-primary)] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
               placeholder="How can I help?"
             />
           </div>
@@ -184,7 +184,7 @@ export default function Contact() {
               name="message"
               rows={6}
               required
-              className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
+              className="w-full p-3 rounded-xl bg-[#5C3A57] border border-gray-600 text-[var(--text-primary)] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#DC9DD0]"
               placeholder="Tell me a bit about your idea, timeline, and goals."
             />
           </div>

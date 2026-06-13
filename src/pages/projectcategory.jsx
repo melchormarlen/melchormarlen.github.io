@@ -158,7 +158,7 @@ export default function ProjectCategory() {
       <button
         onClick={() => scroll("left")}
         className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 
-          bg-[#693365] hover:bg-[#592c55] text-white p-3 rounded-full shadow-lg z-10 
+          bg-[#693365] hover:bg-[#592c55] text-[var(--text-primary)] p-3 rounded-full shadow-lg z-10 
           transition-opacity duration-300
           ${canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         aria-label="Previous"
@@ -170,7 +170,7 @@ export default function ProjectCategory() {
       <button
         onClick={() => scroll("right")}
         className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 
-          bg-[#693365] hover:bg-[#592c55] text-white p-3 rounded-full shadow-lg z-10 
+          bg-[#693365] hover:bg-[#592c55] text-[var(--text-primary)] p-3 rounded-full shadow-lg z-10 
           transition-opacity duration-300
           ${canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         aria-label="Next"

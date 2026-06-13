@@ -64,7 +64,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 h-full w-40 sm:w-48 md:w-56 bg-[var(--bg-page)] z-50 shadow-lg flex flex-col items-start px-6 py-12 space-y-8"
             >
               <button
-                className="text-white text-2xl self-end mb-6"
+                className="text-[var(--text-primary)] text-2xl self-end mb-6"
                 onClick={() => setIsOpen(false)}
               >
                 ✕

@@ -90,7 +90,7 @@ export default function About() {
                 });
               }
             }}
-            className="px-6 py-2 rounded-full border border-[#DC9DD0] text-[#DC9DD0] hover:bg-[#693365] hover:text-white transition"
+            className="px-6 py-2 rounded-full border border-[#DC9DD0] text-[#DC9DD0] hover:bg-[#693365] hover:text-[var(--text-primary)] transition"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >

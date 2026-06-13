@@ -15,7 +15,7 @@ const Pill = ({ children }) => (
 );
 const KPI = ({ kpi, label }) => (
   <div className="p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-soft)]">
-    <div className="text-3xl font-semibold text-white">{kpi}</div>
+    <div className="text-3xl font-semibold text-[var(--text-primary)]">{kpi}</div>
     <div className="text-[var(--text-secondary)] text-sm mt-1">{label}</div>
   </div>
 );
@@ -140,7 +140,7 @@ export default function CaseStudy() {
                   key={s.id}
                   onClick={() => scrollToId(s.id)}
                   className={`whitespace-nowrap px-4 py-2 rounded-full transition ${
-                    activeTab ? "bg-white/10 text-white" : "text-[var(--text-secondary)] hover:text-white"
+                    activeTab ? "bg-white/10 text-[var(--text-primary)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                   }`}
                 >
                   {s.label}
@@ -160,11 +160,11 @@ export default function CaseStudy() {
             </h1>
             <div className="mt-6 space-y-2 text-[var(--text-secondary)]">
               <p>
-                <span className="text-white/90">{data.company}</span> • {data.projectType}
+                <span className="text-[var(--text-primary)]/90">{data.company}</span> • {data.projectType}
               </p>
               <p className="text-sm">
                 Roles:&nbsp;
-                <span className="text-white/90">{data.roles.join(", ")}</span>
+                <span className="text-[var(--text-primary)]/90">{data.roles.join(", ")}</span>
               </p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function CaseStudy() {
       {/* Quick stats teaser*/}
       {data.kpis?.slice(0, 3).map((k, i) => (
         <div key={i} className="text-center">
-          <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">
+          <div className="text-3xl md:text-4xl font-extrabold text-[var(--text-primary)] leading-none">
             <CountUp value={k.kpi} />
           </div>
           <div className="text-xs text-gray-400">{k.label}</div>
@@ -238,7 +238,7 @@ export default function CaseStudy() {
               <div className="flex items-start gap-3">
                 <Target className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
-                  <div className="font-semibold text-white">{o.title}</div>
+                  <div className="font-semibold text-[var(--text-primary)]">{o.title}</div>
                   {o.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{o.desc}</div>}
                 </div>
               </div>
@@ -266,17 +266,17 @@ export default function CaseStudy() {
                     <Icon className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                     <div className="space-y-2">
                       <div>
-                        <div className="font-semibold text-white">Challenge</div>
+                        <div className="font-semibold text-[var(--text-primary)]">Challenge</div>
                         <p className="text-[var(--text-secondary)] text-sm mt-1">{c.challenge}</p>
                       </div>
                       {c.stakeholders && (
                         <div>
-                          <div className="font-semibold text-white">Stakeholders</div>
+                          <div className="font-semibold text-[var(--text-primary)]">Stakeholders</div>
                           <p className="text-[var(--text-secondary)] text-sm mt-1">{c.stakeholders}</p>
                         </div>
                       )}
                       <div>
-                        <div className="font-semibold text-white">Resolution</div>
+                        <div className="font-semibold text-[var(--text-primary)]">Resolution</div>
                         <p className="text-[var(--text-secondary)] text-sm mt-1">{c.resolution}</p>
                       </div>
                     </div>
@@ -305,7 +305,7 @@ export default function CaseStudy() {
               <div className="flex items-start gap-3">
                 <Target className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
-                  <div className="font-semibold text-white">{o.title}</div>
+                  <div className="font-semibold text-[var(--text-primary)]">{o.title}</div>
                   {o.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{o.desc}</div>}
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function CaseStudy() {
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
-                  <div className="font-semibold text-white">{a.title}</div>
+                  <div className="font-semibold text-[var(--text-primary)]">{a.title}</div>
                   {a.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{a.desc}</div>}
                 </div>
               </div>
@@ -355,7 +355,7 @@ export default function CaseStudy() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-[#DC9DD0]" />
                 <div>
-                  <div className="text-lg font-semibold text-white">{i.title}</div>
+                  <div className="text-lg font-semibold text-[var(--text-primary)]">{i.title}</div>
                   {i.desc && <p className="text-[var(--text-secondary)] mt-2">{i.desc}</p>}
                 </div>
               </div>
@@ -379,7 +379,7 @@ export default function CaseStudy() {
                 >
                   <Icon className="mt-1 h-5 w-5 text-[#DC9DD0]" />
                   <div>
-                    <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">
+                    <div className="text-3xl md:text-4xl font-extrabold text-[var(--text-primary)] leading-none">
                       <CountUp value={k.kpi} />
                     </div>
                     <div className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
@@ -411,7 +411,7 @@ export default function CaseStudy() {
               <motion.div key={idx} variants={flowCard} className="space-y-4">
                 {/* Title centered */}
                 <div className="flex items-center justify-center">
-                  <h4 className="text-lg font-semibold text-white text-center">{flow.title}</h4>
+                  <h4 className="text-lg font-semibold text-[var(--text-primary)] text-center">{flow.title}</h4>
                 </div>
 
                 <motion.button
@@ -515,7 +515,7 @@ export default function CaseStudy() {
           <div className="relative w-[95%] max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setFlowOpen(false)}
-              className="absolute -top-10 right-0 text-[var(--text-secondary)] hover:text-white"
+              className="absolute -top-10 right-0 text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
               aria-label="Close"
             >
               <X className="w-7 h-7" />

@@ -17,7 +17,7 @@ const SectionTitle = ({ children, eyebrow }) => (
 
 const KPI = ({ kpi, label }) => (
   <div className="flex flex-col items-center gap-1">
-    <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">{kpi}</div>
+    <div className="text-3xl md:text-4xl font-extrabold text-[var(--text-primary)] leading-none">{kpi}</div>
     <div className="text-xs md:text-sm text-[var(--text-secondary)]">{label}</div>
   </div>
 );
@@ -35,7 +35,7 @@ export default function Marketing() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">{data.title}</h1>
             <div className="mt-6 space-y-3 text-[var(--text-secondary)]">
               <p>
-                As Marketing Director for <span className="text-white/90">{data.org}</span>, {data.overview}
+                As Marketing Director for <span className="text-[var(--text-primary)]/90">{data.org}</span>, {data.overview}
               </p>
 
               {data.highlights?.length ? (
