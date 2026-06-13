@@ -63,8 +63,8 @@ export default function Hero() {
           <span className="text-[#DC9DD0]">full-stack development</span>,{" "}
           <span className="text-[#DC9DD0]">UI/UX design</span>, and{" "}
           <span className="text-[#DC9DD0]">marketing strategy</span>. I love
-          turning ideas into clean, working products — and I'm based in
-          Chicago, IL.
+          turning ideas into clean, working products — and I'm currently based in
+          Indianapolis,IN.
         </p>
 
         <div className="flex gap-4">

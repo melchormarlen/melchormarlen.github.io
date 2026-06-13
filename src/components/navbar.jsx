@@ -21,7 +21,6 @@ export default function Navbar() {
         <a href="#about" className="hover:text-[#DC9DD0]">About</a>
         <a href="#skills" className="hover:text-[#DC9DD0]">Skills</a>
         <a href="#projects" className="hover:text-[#DC9DD0]">Projects</a>
-        <Link to="/marketing" className="hover:text-[#DC9DD0]">Marketing</Link>
         <a href="#contact" className="hover:text-[#DC9DD0]">Contact</a>
         <button
           onClick={toggleTheme}

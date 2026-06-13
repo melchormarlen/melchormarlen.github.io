@@ -51,7 +51,7 @@ export default function About() {
           variants={fadeUp}
         >
           Through my internship as a{" "}
-          <span className="text-[#DC9DD0]">Software Engineer at Eli Lilly</span>,
+          <span className="text-[#DC9DD0]">Tech@Lilly Intern</span>,
           I built internal web applications using Django, PostgreSQL, and React —
           gaining real full-stack experience from database to UI.
         </motion.p>
