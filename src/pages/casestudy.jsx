@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Target, Rocket, Lightbulb, Image as ImageIcon, X , Users, Layers, Repeat, Percent, Award,  Gauge, LayoutDashboard, ShieldCheck} from "lucide-react";
 import { CASES_BY_ID } from "@/data/cases.index.js";
+import ScrollProgress from "../components/scrollprogress.jsx";
+import CountUp from "../components/countup.jsx";
 
 // --- tiny UI helpers ---
 const Pill = ({ children }) => (
@@ -124,10 +126,10 @@ export default function CaseStudy() {
       </section>
     );
   }
-
+  <ScrollProgress />
   return (
     <>
-      {/* Sticky section tabs (Klarna-style) */}
+      {/* Sticky section tabs  */}
       <div id="cs-sticky" className="sticky top-0 z-40 border-b border-[var(--border-soft)] bg-[var(--bg-page)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--bg-page)]/60 ">
         <div className="section-container">
           <div className="flex gap-6 overflow-x-auto py-3 no-scrollbar">
@@ -168,7 +170,15 @@ export default function CaseStudy() {
           </div>
         </div>
       </section>
-
+      {/* Quick stats teaser*/}
+      {data.kpis?.slice(0, 3).map((k, i) => (
+        <div key={i} className="text-center">
+          <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">
+            <CountUp value={k.kpi} />
+          </div>
+          <div className="text-xs text-gray-400">{k.label}</div>
+        </div>
+      ))}
       {/* MY ROLE */}
       <section id="my-role" className="section-container py-14 scroll-mt-28">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -213,7 +223,7 @@ export default function CaseStudy() {
       </section>
       {/* StakeHolders Section*/}
       {/* OBJECTIVES */}
-      <section id="stakeholders" className="section-container py-14 scroll-mt-28">
+      <section id="stakeholders" className="section-container py-14 scroll-mt-28 bg-white/[0.02] rounded-3xl">
         <SectionTitle eyebrow="Collaboration">Stakeholders</SectionTitle>
         <div className="space-y-4">
           {data.stakeholders?.map((o, i) => (
@@ -305,7 +315,7 @@ export default function CaseStudy() {
       </section>
 
       {/* APPROACH */}
-      <section id="approach" className="section-container py-14 scroll-mt-28">
+      <section id="approach" className="section-container py-14 scroll-mt-28 bg-[#5C3A57]/30 rounded-3xl">
         <SectionTitle eyebrow="How we worked">Approach</SectionTitle>
         <div className="space-y-4">
           {data.approach?.map((a, i) => (
@@ -370,7 +380,7 @@ export default function CaseStudy() {
                   <Icon className="mt-1 h-5 w-5 text-[#DC9DD0]" />
                   <div>
                     <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">
-                      {k.kpi}
+                      <CountUp value={k.kpi} />
                     </div>
                     <div className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
                       {k.label}
@@ -490,7 +500,12 @@ export default function CaseStudy() {
               </div>
         </div>
       </section>
-
+      {data.brandGuidelinesUrl && (
+        <a href={data.brandGuidelinesUrl} target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full bg-[#DC9DD0] text-[#493545] font-medium hover:bg-[#b478a9] transition">
+          📄 View Brand Guidelines (PDF)
+        </a>
+      )}
       {/* Lightbox for flows */}
       {flowOpen && data.designFlows?.length > 0 && (
         <div

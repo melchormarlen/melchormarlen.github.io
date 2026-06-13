@@ -11,15 +11,9 @@ import Contact from "./components/contact.jsx";
 import ChatWidget from "./components/chatwidget.jsx";
 import BackToTop from "./components/backtotop.jsx";
 import ScrollToTop from "./components/scrolltotop.jsx";
-import Marketing from "./pages/marketing.jsx";
 
 function AppShell() {
   const location = useLocation();
-
-  // Hide navbar on project pages and the Marketing page
-  const hideNavbar =
-    /^\/projects\/.+/.test(location.pathname) || location.pathname === "/marketing";
-
   return (
     <div className="bg-[var(--bg-page)] min-h-screen text-white font-sans">
       {!hideNavbar && <Navbar />}
@@ -39,7 +33,6 @@ function AppShell() {
         />
         <Route path="/projects/:category" element={<ProjectCategory />} />
         <Route path="/projects/:category/:id" element={<CaseStudy />} />
-        <Route path="/marketing" element={<Marketing />} />
       </Routes>
 
       {/* Floating UI elements */}

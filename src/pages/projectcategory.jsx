@@ -16,6 +16,9 @@ const projects = {
     { id: "ev-charging", title: "HERE x GM LatinX Hackathon", desc: "Real-time EV charging web app built in 24 hours.", bg: "/here.png" },
     { id: "lilly-ai", title: "Eli Lilly AI Onboarding Assistant", desc: "AI-powered onboarding tool with React + Express.", bg: "/lilly logo.jpg" },
   ],
+  marketing: [
+  { id: "shpe-iit", title: "SHPE-IIT Brand & Campaigns", desc: "Brand guidelines, social strategy, and content systems that grew reach by 200K+ views."},
+  { id: "event-promo", title: "Event Promotion Design", desc: "Designed eye-catching visuals for student org events, boosting attendance and engagement.", bg: "/palooza.png" },],
 };
 
 const CATEGORY_LABELS = {
