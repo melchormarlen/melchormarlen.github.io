@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
-import { useTheme } from "../context/ThemeContext.jsx";
+import { useTheme } from "../contexts/ThemeContent.jsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
