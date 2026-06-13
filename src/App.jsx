@@ -14,6 +14,8 @@ import ScrollToTop from "./components/scrolltotop.jsx";
 
 function AppShell() {
   const location = useLocation();
+  const hideNavbar = /^\/projects\/.+/.test(location.pathname);
+
   return (
     <div className="bg-[var(--bg-page)] min-h-screen text-white font-sans">
       {!hideNavbar && <Navbar />}
