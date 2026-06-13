@@ -140,7 +140,7 @@ export default function ProjectCategory() {
     <section key={category} className="section-container py-20 relative">
       <Link
         to="/#projects"
-        className="inline-flex items-center gap-2 text-gray-300 hover:text-[#DC9DD0] mb-6 transition"
+        className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[#DC9DD0] mb-6 transition"
         aria-label="Back to all project categories"
       >
         <ArrowLeft className="w-5 h-5" />
@@ -200,7 +200,7 @@ export default function ProjectCategory() {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-[#493545]/70" />
+              <div className="absolute inset-0 bg-[var(--bg-page)]/70" />
 
               {/* Glow on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-tr from-[#DC9DD0]/40 via-[#693365]/40 to-[#493545]/40" />
@@ -208,7 +208,7 @@ export default function ProjectCategory() {
               {/* Content */}
               <div className="relative z-10 p-6">
                 <h3 className="text-xl font-semibold mb-3 text-[#DC9DD0]">{proj.title}</h3>
-                <p className="text-gray-200 mb-4">{proj.desc}</p>
+                <p className="text-[var(--text-secondary)] mb-4">{proj.desc}</p>
                 <Link
                   to={`/projects/${category}/${proj.id}`}
                   className="bg-[#DC9DD0] px-4 py-2 rounded-full text-[#493545] font-medium hover:bg-[#b478a9] transition"
@@ -240,7 +240,7 @@ export default function ProjectCategory() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-gray-300 text-lg italic"
+          className="text-[var(--text-secondary)] text-lg italic"
         >
           {funFacts[factIndex]}
         </motion.p>

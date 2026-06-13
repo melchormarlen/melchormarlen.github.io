@@ -2,16 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode overrides — applied when <html> does NOT have .dark */
+:root:not(.dark) {
+  --bg-page: #f7f3f6;
+  --bg-surface: #ffffff;
+  --bg-card: #f0e6ee;
+  --text-primary: #2b2030;
+  --text-secondary: #5a4d57;
+  --border-soft: rgba(43,32,48,0.1);
+}
+
+:root.dark {
+  --bg-page: #493545;
+  --bg-surface: #5C3A57;
+  --bg-card: rgba(255,255,255,0.05);
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --border-soft: rgba(255,255,255,0.1);
+}
+
 body {
-  @apply bg-[#493545] text-white font-sans transition-colors duration-300;
-}
-
-.dark body {
-  @apply bg-[#493545] text-white;
-}
-
-:root:not(.dark) body {
-  @apply bg-[#f5f0f4] text-[#2b2030];
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  @apply font-sans transition-colors duration-300;
 }
 /* Hide scrollbar on Chrome, Safari and Edge */
 .scrollbar-hide::-webkit-scrollbar {

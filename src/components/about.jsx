@@ -47,7 +47,7 @@ export default function About() {
         </motion.h2>
 
         <motion.p
-          className="text-lg leading-[1.563rem] font-normal text-gray-200 mb-4"
+          className="text-lg leading-[1.563rem] font-normal text-[var(--text-secondary)] mb-4"
           variants={fadeUp}
         >
           Through my internship as a{" "}
@@ -57,7 +57,7 @@ export default function About() {
         </motion.p>
 
         <motion.p
-          className="text-lg leading-[1.563rem] font-normal text-gray-200 mb-6"
+          className="text-lg leading-[1.563rem] font-normal text-[var(--text-secondary)] mb-6"
           variants={fadeUp}
         >
           I also bring a background in{" "}

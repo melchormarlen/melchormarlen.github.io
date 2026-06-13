@@ -7,14 +7,14 @@ import { CASES_BY_ID } from "@/data/cases.index.js";
 
 // --- tiny UI helpers ---
 const Pill = ({ children }) => (
-  <span className="px-3 py-1 rounded-full bg-white/5 text-gray-200 border border-white/10 text-xs">
+  <span className="px-3 py-1 rounded-full bg-[var(--bg-card)] text-[var(--text-secondary)] border border-[var(--border-soft)] text-xs">
     {children}
   </span>
 );
 const KPI = ({ kpi, label }) => (
-  <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+  <div className="p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-soft)]">
     <div className="text-3xl font-semibold text-white">{kpi}</div>
-    <div className="text-gray-300 text-sm mt-1">{label}</div>
+    <div className="text-[var(--text-secondary)] text-sm mt-1">{label}</div>
   </div>
 );
 const KPI_ICONS = {
@@ -128,7 +128,7 @@ export default function CaseStudy() {
   return (
     <>
       {/* Sticky section tabs (Klarna-style) */}
-      <div id="cs-sticky" className="sticky top-0 z-40 border-b border-white/10 bg-[#493545]/95 backdrop-blur supports-[backdrop-filter]:bg-[#493545]/60 ">
+      <div id="cs-sticky" className="sticky top-0 z-40 border-b border-[var(--border-soft)] bg-[var(--bg-page)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--bg-page)]/60 ">
         <div className="section-container">
           <div className="flex gap-6 overflow-x-auto py-3 no-scrollbar">
             {sections.map((s) => {
@@ -138,7 +138,7 @@ export default function CaseStudy() {
                   key={s.id}
                   onClick={() => scrollToId(s.id)}
                   className={`whitespace-nowrap px-4 py-2 rounded-full transition ${
-                    activeTab ? "bg-white/10 text-white" : "text-gray-300 hover:text-white"
+                    activeTab ? "bg-white/10 text-white" : "text-[var(--text-secondary)] hover:text-white"
                   }`}
                 >
                   {s.label}
@@ -156,7 +156,7 @@ export default function CaseStudy() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
               {data.title}
             </h1>
-            <div className="mt-6 space-y-2 text-gray-300">
+            <div className="mt-6 space-y-2 text-[var(--text-secondary)]">
               <p>
                 <span className="text-white/90">{data.company}</span> • {data.projectType}
               </p>
@@ -174,7 +174,7 @@ export default function CaseStudy() {
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
             <SectionTitle eyebrow="Context">My role</SectionTitle>
-            <p className="text-gray-200 leading-relaxed">{data.overview}</p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">{data.overview}</p>
 
             {/* Highlights as pills */}
             {data.highlights?.length ? (
@@ -223,13 +223,13 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="w-full rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-5"
             >
               <div className="flex items-start gap-3">
                 <Target className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
                   <div className="font-semibold text-white">{o.title}</div>
-                  {o.desc && <div className="text-gray-300 text-sm mt-1">{o.desc}</div>}
+                  {o.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{o.desc}</div>}
                 </div>
               </div>
             </motion.div>
@@ -250,24 +250,24 @@ export default function CaseStudy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.05 }}
-                  className="w-full rounded-2xl border border-white/10 bg-white/5 p-5"
+                  className="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-5"
                 >
                   <div className="flex items-start gap-3">
                     <Icon className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                     <div className="space-y-2">
                       <div>
                         <div className="font-semibold text-white">Challenge</div>
-                        <p className="text-gray-300 text-sm mt-1">{c.challenge}</p>
+                        <p className="text-[var(--text-secondary)] text-sm mt-1">{c.challenge}</p>
                       </div>
                       {c.stakeholders && (
                         <div>
                           <div className="font-semibold text-white">Stakeholders</div>
-                          <p className="text-gray-300 text-sm mt-1">{c.stakeholders}</p>
+                          <p className="text-[var(--text-secondary)] text-sm mt-1">{c.stakeholders}</p>
                         </div>
                       )}
                       <div>
                         <div className="font-semibold text-white">Resolution</div>
-                        <p className="text-gray-300 text-sm mt-1">{c.resolution}</p>
+                        <p className="text-[var(--text-secondary)] text-sm mt-1">{c.resolution}</p>
                       </div>
                     </div>
                   </div>
@@ -290,13 +290,13 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="w-full rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-5"
             >
               <div className="flex items-start gap-3">
                 <Target className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
                   <div className="font-semibold text-white">{o.title}</div>
-                  {o.desc && <div className="text-gray-300 text-sm mt-1">{o.desc}</div>}
+                  {o.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{o.desc}</div>}
                 </div>
               </div>
             </motion.div>
@@ -315,13 +315,13 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="w-full rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="w-full rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-5"
             >
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 mt-0.5 text-[#DC9DD0]" />
                 <div>
                   <div className="font-semibold text-white">{a.title}</div>
-                  {a.desc && <div className="text-gray-300 text-sm mt-1">{a.desc}</div>}
+                  {a.desc && <div className="text-[var(--text-secondary)] text-sm mt-1">{a.desc}</div>}
                 </div>
               </div>
             </motion.div>
@@ -340,13 +340,13 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.05 }}
-              className="rounded-2xl border border-white/10 bg-[#2b1f2c]/60 p-6"
+              className="rounded-2xl border border-[var(--border-soft)] bg-[#2b1f2c]/60 p-6"
             >
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-[#DC9DD0]" />
                 <div>
                   <div className="text-lg font-semibold text-white">{i.title}</div>
-                  {i.desc && <p className="text-gray-300 mt-2">{i.desc}</p>}
+                  {i.desc && <p className="text-[var(--text-secondary)] mt-2">{i.desc}</p>}
                 </div>
               </div>
             </motion.div>
@@ -355,7 +355,7 @@ export default function CaseStudy() {
 
       {/* KPIs — icons + typographic row (very subtle/no dividers) */}
       {data.kpis?.length ? (
-        <div className="mt-10 border-t border-white/10 pt-6">
+        <div className="mt-10 border-t border-[var(--border-soft)] pt-6">
           {/* To remove dividers completely, delete `lg:divide-x lg:divide-white/5` */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-white/5">
             {data.kpis.map((k, i) => {
@@ -372,7 +372,7 @@ export default function CaseStudy() {
                     <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">
                       {k.kpi}
                     </div>
-                    <div className="text-xs md:text-sm text-gray-300 mt-1">
+                    <div className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
                       {k.label}
                     </div>
                   </div>
@@ -428,7 +428,7 @@ export default function CaseStudy() {
 
                 {/* Blurb centered with readable width */}
                 {flow.desc ? (
-                  <p className="text-gray-200 leading-relaxed text-center mx-auto max-w-2xl">
+                  <p className="text-[var(--text-secondary)] leading-relaxed text-center mx-auto max-w-2xl">
                     {flow.desc}
                   </p>
                 ) : null}
@@ -439,7 +439,7 @@ export default function CaseStudy() {
                     {flow.tags.map((t, i) => (
                       <span
                         key={i}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-gray-200"
+                        className="rounded-full border border-[var(--border-soft)] bg-[var(--bg-card)] px-3 py-1 text-sm text-[var(--text-secondary)]"
                       >
                         {t}
                       </span>
@@ -461,10 +461,10 @@ export default function CaseStudy() {
         <SectionTitle eyebrow="Wrap-up">Final Output</SectionTitle>
         <div className="grid lg:grid-cols-3 gap-10 items-start">
           <div className="lg:col-span-2">
-            <p className="text-gray-200 leading-relaxed">{data.reflection}</p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">{data.reflection}</p>
           </div>
               <div className="lg:col-span-1">
-                <div className="rounded-2xl border border-white/10 p-6 bg-white/5 h-full">
+                <div className="rounded-2xl border border-[var(--border-soft)] p-6 bg-[var(--bg-card)] h-full">
                   <div className="flex items-center gap-2">
                     <Rocket className="w-5 h-5 text-[#DC9DD0]" />
                     <div className="font-semibold">
@@ -473,14 +473,14 @@ export default function CaseStudy() {
                   </div>
 
                   {Array.isArray(data.takeaways) && data.takeaways.length > 0 ? (
-                    <ul className="mt-4 space-y-2 text-sm text-gray-300 list-disc list-inside">
+                    <ul className="mt-4 space-y-2 text-sm text-[var(--text-secondary)] list-disc list-inside">
                       {data.takeaways.map((t, i) => (
                         <li key={i}>{t}</li>
                       ))}
                     </ul>
                   ) : (
                     // Fallback if a case doesn’t define takeaways yet
-                    <ul className="mt-4 space-y-2 text-sm text-gray-300 list-disc list-inside">
+                    <ul className="mt-4 space-y-2 text-sm text-[var(--text-secondary)] list-disc list-inside">
                       <li>Prioritize the primary job-to-be-done.</li>
                       <li>Model constraints before pixels.</li>
                       <li>Iterate with fast, honest feedback loops.</li>
@@ -500,7 +500,7 @@ export default function CaseStudy() {
           <div className="relative w-[95%] max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setFlowOpen(false)}
-              className="absolute -top-10 right-0 text-gray-300 hover:text-white"
+              className="absolute -top-10 right-0 text-[var(--text-secondary)] hover:text-white"
               aria-label="Close"
             >
               <X className="w-7 h-7" />
@@ -511,7 +511,7 @@ export default function CaseStudy() {
               className="w-full rounded-xl shadow-2xl"
             />
             {data.designFlows[flowIndex].title && (
-              <p className="text-gray-300 text-sm mt-3 text-center">{data.designFlows[flowIndex].title}</p>
+              <p className="text-[var(--text-secondary)] text-sm mt-3 text-center">{data.designFlows[flowIndex].title}</p>
             )}
           </div>
         </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MARKETING as data } from "@/data/marketing.index.js";
 
 const Pill = ({ children }) => (
-  <span className="px-3 py-1 rounded-full bg-white/5 text-gray-200 border border-white/10 text-xs">
+  <span className="px-3 py-1 rounded-full bg-[var(--bg-card)] text-[var(--text-secondary)] border border-[var(--border-soft)] text-xs">
     {children}
   </span>
 );
@@ -18,7 +18,7 @@ const SectionTitle = ({ children, eyebrow }) => (
 const KPI = ({ kpi, label }) => (
   <div className="flex flex-col items-center gap-1">
     <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">{kpi}</div>
-    <div className="text-xs md:text-sm text-gray-300">{label}</div>
+    <div className="text-xs md:text-sm text-[var(--text-secondary)]">{label}</div>
   </div>
 );
 
@@ -27,13 +27,13 @@ export default function Marketing() {
     <main className="pt-8">
       {/* Back */}
       <section className="section-container pt-8 pb-6">
-        <Link to="/" className="inline-flex items-center gap-2 text-gray-300 hover:text-[#DC9DD0]">← Back</Link>
+        <Link to="/" className="inline-flex items-center gap-2 text-[var(--text-secondary)] hover:text-[#DC9DD0]">← Back</Link>
 
         {/* HERO (left text, right video) */}
         <div className="grid lg:grid-cols-12 gap-10 items-start mt-6">
           <div className="lg:col-span-7">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">{data.title}</h1>
-            <div className="mt-6 space-y-3 text-gray-300">
+            <div className="mt-6 space-y-3 text-[var(--text-secondary)]">
               <p>
                 As Marketing Director for <span className="text-white/90">{data.org}</span>, {data.overview}
               </p>
@@ -88,7 +88,7 @@ export default function Marketing() {
         <SectionTitle eyebrow="Case Snapshot">{data.guidelines.title}</SectionTitle>
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
-            <p className="text-gray-200 leading-relaxed">{data.guidelines.desc}</p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">{data.guidelines.desc}</p>
             {data.guidelines.pills?.length ? (
               <div className="flex flex-wrap gap-2 mt-4">
                 {data.guidelines.pills.map((p, i) => <Pill key={i}>{p}</Pill>)}
@@ -96,10 +96,10 @@ export default function Marketing() {
             ) : null}
           </div>
           <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-soft)] bg-[var(--bg-card)]">
               {/* Toolbar */}
-              <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
-                <div className="text-sm text-gray-300">Brand Guidelines (PDF)</div>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--border-soft)]">
+                <div className="text-sm text-[var(--text-secondary)]">Brand Guidelines (PDF)</div>
                 <div className="flex gap-2">
                   <a
                     href={data.guidelines.pdfUrl}
@@ -137,7 +137,7 @@ export default function Marketing() {
         <SectionTitle eyebrow="Case Snapshot">{data.campaigns.title}</SectionTitle>
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
-            <p className="text-gray-200 leading-relaxed">{data.campaigns.desc}</p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">{data.campaigns.desc}</p>
             {data.campaigns.pills?.length ? (
               <div className="flex flex-wrap gap-2 mt-4">
                 {data.campaigns.pills.map((p, i) => <Pill key={i}>{p}</Pill>)}
@@ -153,7 +153,7 @@ export default function Marketing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="rounded-xl overflow-hidden border border-white/10 bg-white/5"
+                className="rounded-xl overflow-hidden border border-[var(--border-soft)] bg-[var(--bg-card)]"
               >
                 <div className="aspect-[4/5]"> {/* keeps tiles consistent */}
                   {item.type === "video" ? (
@@ -194,14 +194,14 @@ export default function Marketing() {
                 muted
                 loop
                 playsInline
-                className="w-full rounded-xl border border-white/10"
+                className="w-full rounded-xl border border-[var(--border-soft)]"
               />
             ) : (
               <img
                 key={i}
                 src={item.src}
                 alt={item.alt}
-                className="w-full rounded-xl border border-white/10"
+                className="w-full rounded-xl border border-[var(--border-soft)]"
               />
             )
           )}

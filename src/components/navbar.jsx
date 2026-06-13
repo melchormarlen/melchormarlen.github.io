@@ -9,7 +9,7 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="section-container flex justify-between items-center py-4 pt-8 bg-[#493545] relative">
+    <nav className="section-container flex justify-between items-center py-4 pt-8 bg-[var(--bg-page)] relative">
       {/* Logo */}
       <Link to="/" className="flex items-center">
         <img src="/mylogo2.png" alt="Marz Logo" className="h-12 w-auto" />
@@ -61,7 +61,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="fixed top-0 right-0 h-full w-40 sm:w-48 md:w-56 bg-[#493545] z-50 shadow-lg flex flex-col items-start px-6 py-12 space-y-8"
+              className="fixed top-0 right-0 h-full w-40 sm:w-48 md:w-56 bg-[var(--bg-page)] z-50 shadow-lg flex flex-col items-start px-6 py-12 space-y-8"
             >
               <button
                 className="text-white text-2xl self-end mb-6"

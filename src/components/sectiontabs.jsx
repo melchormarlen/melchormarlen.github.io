@@ -42,7 +42,7 @@ export default function SectionTabs({
   };
 
   return (
-    <div className="sticky top-0 z-40 border-b border-white/10 bg-[#493545]/80 backdrop-blur-md">
+    <div className="sticky top-0 z-40 border-b border-[var(--border-soft)] bg-[var(--bg-page)]/80 backdrop-blur-md">
       <div className="section-container">
         <div className="flex items-center justify-start gap-2 md:gap-4 overflow-x-auto no-scrollbar py-3">
           {/* 🔥 Use the SAME container as Navbar to align left edges */}
@@ -53,12 +53,12 @@ export default function SectionTabs({
                 key={id}
                 onClick={() => jump(id)}
                 className={`relative rounded-full px-4 py-2 text-sm md:text-base transition
-                  ${isActive ? "text-white" : "text-gray-300 hover:text-white"}`}
+                  ${isActive ? "text-white" : "text-[var(--text-secondary)] hover:text-white"}`}
               >
                 {isActive && (
                   <motion.span
                     layoutId="tabs-pill"
-                    className="absolute inset-0 rounded-full bg-white/5 border border-white/10"
+                    className="absolute inset-0 rounded-full bg-[var(--bg-card)] border border-[var(--border-soft)]"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}

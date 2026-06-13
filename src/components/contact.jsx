@@ -49,7 +49,7 @@ export default function Contact() {
         <h2 className="text-4xl font-semibold">
           Let’s <span className="text-[#DC9DD0]">Connect</span>
         </h2>
-        <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
+        <p className="text-[var(--text-secondary)] mt-3 max-w-2xl mx-auto">
           Have a project, collaboration, or question? I’d love to hear from you.
         </p>
       </div>
@@ -64,12 +64,12 @@ export default function Contact() {
           className="lg:col-span-5 space-y-6"
         >
           {/* Card: quick info */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-6">
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-[#DC9DD0]" />
               <div className="font-semibold">Reach me</div>
             </div>
-            <div className="mt-4 space-y-3 text-gray-300">
+            <div className="mt-4 space-y-3 text-[var(--text-secondary)]">
               <a
                 href="mailto:melchormarlen@gmail.com"
                 className="flex items-center gap-2 hover:text-white"
@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
 
           {/* Card: social */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-6">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 rounded-full bg-[#DC9DD0]" />
               <div className="font-semibold">Social</div>
@@ -95,7 +95,7 @@ export default function Contact() {
                 href="https://github.com/melchormarlen"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-[#5C3A57] hover:bg-[#623d5d]"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-[var(--border-soft)] bg-[#5C3A57] hover:bg-[#623d5d]"
                 aria-label="GitHub"
               >
                 <Github className="w-4 h-4" /> GitHub
@@ -104,7 +104,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/mmelchor/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-[#5C3A57] hover:bg-[#623d5d]"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-[var(--border-soft)] bg-[#5C3A57] hover:bg-[#623d5d]"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" /> LinkedIn
@@ -113,8 +113,8 @@ export default function Contact() {
           </div>
 
           {/* Card: availability blurb */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-sm text-gray-300">
+          <div className="rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-6">
+            <div className="text-sm text-[var(--text-secondary)]">
               I typically reply within 24–48 hours. For speaking, design critiques,
               or mentorship chats, include a few time windows.
             </div>
@@ -128,16 +128,16 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="lg:col-span-7 rounded-2xl border border-white/10 bg-white/5 p-6 space-y-5"
+          className="lg:col-span-7 rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)] p-6 space-y-5"
         >
           {/* success / error */}
           {status.ok && (
-            <div className="rounded-xl border border-white/10 bg-emerald-400/10 text-emerald-200 px-4 py-3">
+            <div className="rounded-xl border border-[var(--border-soft)] bg-emerald-400/10 text-emerald-200 px-4 py-3">
               Thanks! Your message has been sent — I’ll get back to you soon.
             </div>
           )}
           {status.error && (
-            <div className="rounded-xl border border-white/10 bg-rose-400/10 text-rose-200 px-4 py-3">
+            <div className="rounded-xl border border-[var(--border-soft)] bg-rose-400/10 text-rose-200 px-4 py-3">
               {status.error}
             </div>
           )}
@@ -147,7 +147,7 @@ export default function Contact() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm text-gray-300 mb-2">Name</label>
+              <label className="block text-sm text-[var(--text-secondary)] mb-2">Name</label>
               <input
                 type="text"
                 name="name"
@@ -157,7 +157,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-2">Email</label>
+              <label className="block text-sm text-[var(--text-secondary)] mb-2">Email</label>
               <input
                 type="email"
                 name="email"
@@ -169,7 +169,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">Subject</label>
+            <label className="block text-sm text-[var(--text-secondary)] mb-2">Subject</label>
             <input
               type="text"
               name="subject"
@@ -179,7 +179,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">Message</label>
+            <label className="block text-sm text-[var(--text-secondary)] mb-2">Message</label>
             <textarea
               name="message"
               rows={6}

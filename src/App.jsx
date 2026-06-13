@@ -21,7 +21,7 @@ function AppShell() {
     /^\/projects\/.+/.test(location.pathname) || location.pathname === "/marketing";
 
   return (
-    <div className="bg-[#493545] min-h-screen text-white font-sans">
+    <div className="bg-[var(--bg-page)] min-h-screen text-white font-sans">
       {!hideNavbar && <Navbar />}
 
       <Routes>

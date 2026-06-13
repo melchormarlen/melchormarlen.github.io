@@ -25,7 +25,7 @@ export default function Projects() {
         </motion.h2>
 
         <motion.p
-          className="text-gray-300 max-w-xl text-[1.563rem] leading-snug"
+          className="text-[var(--text-secondary)] max-w-xl text-[1.563rem] leading-snug"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -53,7 +53,7 @@ export default function Projects() {
           >
             <div>
               <h3 className="text-2xl font-semibold mb-3">{cat.title}</h3>
-              <p className="text-gray-300 text-base">{cat.desc}</p>
+              <p className="text-[var(--text-secondary)] text-base">{cat.desc}</p>
             </div>
             <Link
               to={`/projects/${cat.id}`}

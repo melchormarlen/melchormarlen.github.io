@@ -57,7 +57,7 @@ export default function Hero() {
           <span className="inline-block w-[2px] h-6 bg-[#DC9DD0] ml-1 animate-pulse align-middle" />
         </h2>
 
-        <p className="max-w-lg text-lg leading-relaxed font-normal text-gray-200 mb-6">
+        <p className="max-w-lg text-lg leading-relaxed font-normal text-[var(--text-secondary)] mb-6">
           I'm a recent Computer Science graduate from Illinois Institute of
           Technology with hands-on experience across{" "}
           <span className="text-[#DC9DD0]">full-stack development</span>,{" "}
