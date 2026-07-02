@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Navbar from "./components/navbar.jsx";
 import Hero from "./components/hero.jsx";
 import About from "./components/about.jsx";
+import Skills from "./components/skils.jsx";
 import Projects from "./components/projects.jsx";
 import Footer from "./components/footer.jsx";
 import ProjectCategory from "./pages/projectcategory.jsx";
@@ -27,6 +28,7 @@ function AppShell() {
             <>
               <Hero />
               <About />
+              <Skills /> 
               <Projects />
               <Contact />
               <Footer />

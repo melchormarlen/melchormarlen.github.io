@@ -79,7 +79,7 @@ export default function About() {
           </motion.a>
 
           <motion.a
-            href="/ResumeMelchor2025.pdf"
+            href="/resumeJUNE.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
